@@ -1000,7 +1000,7 @@ public class SlidingMenu extends RelativeLayout {
 
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	public void manageLayers(float percentOpen) {
-		if (Build.VERSION.SDK_INT < 11) return;
+		if (Build.VERSION.SDK_INT < 11 || Build.VERSION.SDK_INT > 20) return;
 
 		boolean layer = percentOpen > 0.0f && percentOpen < 1.0f;
 		final int layerType = layer ? View.LAYER_TYPE_HARDWARE : View.LAYER_TYPE_NONE;
